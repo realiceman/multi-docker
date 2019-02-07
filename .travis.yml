@@ -11,9 +11,9 @@ script:
 
 after_success:
   - docker build -t youssefh/multi-client ./client
-  - docker buld -t youssefh/multi-nginx ./nginx
-  - docker buld -t youssefh/multi-server ./server
-  - docker buld -t youssefh/multi-worker ./worker
+  - docker build -t youssefh/multi-nginx ./nginx
+  - docker build -t youssefh/multi-server ./server
+  - docker build -t youssefh/multi-worker ./worker
   # log in to the docker CLI
   - echo "DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # push images
